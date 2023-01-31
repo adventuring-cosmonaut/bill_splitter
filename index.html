@@ -1,0 +1,107 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Bill splitter</title>
+    <link rel="stylesheet" href="style/style.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css" />
+  </head>
+  <body>
+    <!-- ===== HEADLINE ===== -->
+    <h1 class="splitter_headline_style">
+      SPLI <br />
+      TTER
+    </h1>
+
+    <!-- ===== MAIN ===== -->
+    <main>
+      <!-- ===== INPUT SECTION ===== -->
+      <form class="input_section_style">
+        <div class="bill_input_section_style">
+          <p id="bill_error_text_number" class="inactive_text_error">Must be a number</p>
+          <p id="bill_error_text_zero" class="inactive_text_error">Can't be zero</p>
+          <h3>Bill</h3>
+          <img class="dollar_icon_style" src="./images/icon-dollar.svg" alt="$" />
+          <input id="bill_input" class="bill_input_style" type="text" name="Bill-amount" placeholder="0" onkeyup="outputClick()" />
+        </div>
+
+        <div class="people_input_section_style">
+          <p id="people_error_text_number" class="inactive_text_error">Must be a number</p>
+          <p id="people_error_text_zero" class="inactive_text_error">Can't be zero</p>
+          <h3>Number Of People</h3>
+          <img src="./images/icon-person.svg" alt="" class="person_icon_style" />
+          <input id="people_input" class="people_input_style" type="text" name="People-amount" placeholder="0" onkeyup="outputClick()" />
+        </div>
+
+        <div class="tip_selection_section_style">
+          <h3>Select Tip %</h3>
+          <div class="tip_percentage_selection_style">
+            <div id="five_percent_button" class="percent_button_style" onclick="outputClick(five_percent_button, five_percent_button.textContent)">
+              5<i class="bi bi-percent"></i>
+            </div>
+            <div id="ten_percent_button" class="percent_button_style" onclick="outputClick(ten_percent_button, ten_percent_button.textContent)">
+              10<i class="bi bi-percent"></i>
+            </div>
+            <div
+              id="fifteen_percent_button"
+              class="percent_button_style"
+              onclick="outputClick(fifteen_percent_button, fifteen_percent_button.textContent)">
+              15<i class="bi bi-percent"></i>
+            </div>
+            <div
+              id="twentyfive_percent_button"
+              class="percent_button_style"
+              onclick="outputClick(twentyfive_percent_button, twentyfive_percent_button.textContent)">
+              25<i class="bi bi-percent"></i>
+            </div>
+            <div id="fifty_percent_button" class="percent_button_style" onclick="outputClick(fifty_percent_button, fifty_percent_button.textContent)">
+              50<i class="bi bi-percent"></i>
+            </div>
+            <section id="custom_tip_wrapper" class="custom_tip_wrapper_style">
+              <input
+                id="custom_tip"
+                class="custom_tip_style"
+                type="text"
+                name="Custom-Tip"
+                placeholder="Custom"
+                onkeyup="outputClick(custom_input, custom_input.value)" />
+            </section>
+          </div>
+        </div>
+      </form>
+
+      <!-- ===== OUTPUT SECTION ===== -->
+      <div class="output_section_style">
+        <div class="amounts_wrapper_style">
+          <div class="tip_amount_style" id="tip_amount">
+            <hgroup class="tip_amount_headline_style">
+              <h3>Tip Amount</h3>
+              <p>/ person</p>
+            </hgroup>
+            <div class="amount_output_style" id="tip_amount_output">$0.00</div>
+          </div>
+
+          <div class="total_amount_style" id="total_amount">
+            <hgroup class="total_amount_headline_style">
+              <h3>Total</h3>
+              <p>/ person</p>
+            </hgroup>
+            <div class="amount_output_style" id="total_amount_output">$0.00</div>
+          </div>
+        </div>
+        <div class="reset_button_style" id="reset_button_inactive">RESET</div>
+        <div class="reset_button_style reset_inactive reset_active" id="reset_button_active" onclick="reset_activator()">RESET</div>
+      </div>
+    </main>
+
+    <div class="tester"></div>
+    <!--  ===== ATTRIBUTION ===== -->
+    <div class="attribution_style"></div>
+    <script src="script/script.js"></script>
+  </body>
+</html>
