@@ -1,6 +1,7 @@
 # Bill splitter
 
 ### Code challenge from [FrontendMentor](https://www.frontendmentor.io/) with self-written JS
+[Github Pages Link To Site](https://adventuring-cosmonaut.github.io/bill_splitter/)
 
 ---
 
